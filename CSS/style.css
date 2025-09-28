@@ -132,7 +132,7 @@ html, body {
 }
 
 .carousel-section img {
-  width: 85%;
+  width: 60%;
   height: 700px;
   overflow: hidden;
   display: block;
@@ -317,7 +317,7 @@ html, body {
 
 .contacto-form {
     max-width: 600px;
-    margin: 0 auto;
+    margin: auto auto;
     padding: 20px;
     background-color: rgb(0, 146, 70);
     border-radius: 8px;
@@ -325,8 +325,11 @@ html, body {
     display: flex;
     text-align: center;
     flex-direction: column;
-    height: 500px;
-}
+    height: 700px;
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 80px;
+}  
 
 #formCont {
     height: 100%;
@@ -343,6 +346,13 @@ html, body {
     border-radius: 4px;
     box-sizing: border-box;
     font-size: 16px;
+}
+
+.fonts {
+    font-family: "Tangerine", cursive;
+    font-size: 25px;
+    color: rgb(255, 98, 0);
+    margin-bottom: 10px;
 }
 
 #carta-título {
