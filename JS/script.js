@@ -66,3 +66,45 @@ function enviarReserva() {
         });
 }
 
+
+//  Inicializar EmailJS
+emailjs.init("TU_USER_ID"); // Reemplaza con tu User ID de EmailJS
+
+// Función para enviar formulario de contacto
+function enviarContacto(event) {
+    event.preventDefault();
+    
+    const form = event.target;
+    const formData = new FormData(form);
+    
+    // Obtener el valor del radio button seleccionado
+    const satisfactionRadio = document.querySelector('input[name="satisfaction"]:checked');
+    
+    const templateParams = {
+        from_name: formData.get('name'),
+        from_email: formData.get('email'),
+        phone: formData.get('telefono'),
+        message: formData.get('message'),
+        satisfaction: satisfactionRadio ? satisfactionRadio.value : 'No especificado'
+    };
+    
+    // Enviar email usando EmailJS
+    emailjs.send('TU_SERVICE_ID', 'TU_TEMPLATE_ID', templateParams) // Reemplaza con tus IDs
+        .then(function(response) {
+            alert('¡Mensaje enviado exitosamente!');
+            form.reset();
+        })
+        .catch(function(error) {
+            alert('Error al enviar el mensaje. Por favor, intenta de nuevo.');
+            console.error('Error:', error);
+        });
+}
+
+// Agregar event listener al formulario de contacto cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('formCont');
+    if (contactForm) {
+        contactForm.addEventListener('submit', enviarContacto);
+    }
+});
+

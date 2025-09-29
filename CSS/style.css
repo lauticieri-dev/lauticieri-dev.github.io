@@ -325,8 +325,8 @@ html, body {
     display: flex;
     text-align: center;
     flex-direction: column;
-    height: 700px;
-    font-size: 30px;
+    height: 750px;
+    font-size: 15px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-top: 80px;
     } 
