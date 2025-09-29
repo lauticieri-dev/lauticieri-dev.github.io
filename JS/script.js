@@ -47,8 +47,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 function enviarReserva() {
-
     const form = document.getElementById('reserva-form');
+    
     if (form.fecha.value < new Date().toISOString().split('T')[0]) {
         alert('La fecha de la reserva no puede ser en el pasado.');
         return;
@@ -57,20 +57,31 @@ function enviarReserva() {
         alert('Por favor, completa todos los campos requeridos.');
         return;
     }
-    emailjs.sendForm('service_se6yqmd', 'template_h6iypyi', '#reserva-form')
+
+    // Crear parámetros del template
+    const formData = new FormData(form);
+    const templateParams = {
+        nombre: formData.get('nombre'),
+        email: formData.get('email'),
+        telefono: formData.get('telefono'),
+        fecha: formData.get('fecha'),
+        hora: formData.get('hora'),
+        comensales: formData.get('comensales')
+    };
+
+    // Enviar usando templateParams
+    emailjs.send('service_se6yqmd', 'template_h6iypyi', templateParams)
         .then(function (response) {
             alert('¡Reserva enviada correctamente!');
             document.getElementById('reserva-form').reset();
         }, function (error) {
             alert('Error al enviar la reserva. Intenta de nuevo.');
+            console.error('Error:', error);
         });
 }
 
 
-//  Inicializar EmailJS
-emailjs.init("TU_USER_ID"); // Reemplaza con tu User ID de EmailJS
 
-// Función para enviar formulario de contacto
 function enviarContacto(event) {
     event.preventDefault();
     
@@ -81,15 +92,15 @@ function enviarContacto(event) {
     const satisfactionRadio = document.querySelector('input[name="satisfaction"]:checked');
     
     const templateParams = {
-        from_name: formData.get('name'),
-        from_email: formData.get('email'),
-        phone: formData.get('telefono'),
+        name: formData.get('name'),                    // Cambiado de from_name a name
+        email: formData.get('email'),                  
+        telefono: formData.get('telefono'),            // Cambiado de phone a telefono
         message: formData.get('message'),
         satisfaction: satisfactionRadio ? satisfactionRadio.value : 'No especificado'
     };
     
     // Enviar email usando EmailJS
-    emailjs.send('TU_SERVICE_ID', 'TU_TEMPLATE_ID', templateParams) // Reemplaza con tus IDs
+    emailjs.send('service_se6yqmd', 'template_gohw4kq', templateParams) // Reemplaza con tus IDs
         .then(function(response) {
             alert('¡Mensaje enviado exitosamente!');
             form.reset();
