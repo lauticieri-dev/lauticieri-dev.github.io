@@ -3,7 +3,10 @@
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    document.querySelector('input[name="fecha"]').addEventListener('change', function () {
+    // Solo ejecutar este código si estamos en la página de reservas
+    const fechaInput = document.querySelector('input[name="fecha"]');
+    if (fechaInput) {
+        fechaInput.addEventListener('change', function () {
         const horarios = {
             default: [
                 "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "13:00", "13:30", "14:00",
@@ -42,8 +45,9 @@ document.addEventListener('DOMContentLoaded', function () {
             option.textContent = hora;
             horaSelect.appendChild(option);
         });
-    });
-});
+        }); // Cerrar el addEventListener de fechaInput
+    } // Cerrar el if (fechaInput)
+}); // Cerrar el DOMContentLoaded
 
 
 function enviarReserva() {
@@ -92,11 +96,12 @@ function enviarContacto(event) {
     const satisfactionRadio = document.querySelector('input[name="satisfaction"]:checked');
     
     const templateParams = {
-        name: formData.get('name'),                    // Cambiado de from_name a name
+        name: formData.get('name'),
         email: formData.get('email'),                  
-        telefono: formData.get('telefono'),            // Cambiado de phone a telefono
+        telefono: formData.get('telefono'),
         message: formData.get('message'),
-        satisfaction: satisfactionRadio ? satisfactionRadio.value : 'No especificado'
+        satisfaction: satisfactionRadio ? satisfactionRadio.value : 'No especificado',
+        motivo: formData.get('motivo')  // Nuevo campo agregado
     };
     
     // Enviar email usando EmailJS
