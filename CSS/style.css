@@ -64,10 +64,6 @@ div, section, main, header, footer, nav, ul, li {
 
 
 
-
-
-
-
 .Markers {
     text-decoration: none;
     color: rgb(141, 9, 9);
@@ -97,6 +93,7 @@ div, section, main, header, footer, nav, ul, li {
 }
 
 
+/* Hero Main */
 .hero {
     background-image: url(../IMG/Inicio/Ristorante\ Cieri.jpg);
     background-size: cover;
@@ -112,6 +109,7 @@ div, section, main, header, footer, nav, ul, li {
 
 }
 
+/* Footer */
 .footer {
     background-color: rgb(0, 146, 70);
     color: white;
@@ -177,7 +175,7 @@ div, section, main, header, footer, nav, ul, li {
         width: 100%;
     }
 }
-
+/* Titulo y subtítulos del Hero en index.html */
 .Titulo {
     font-size: 130px;
     color: crimson;
@@ -191,6 +189,20 @@ div, section, main, header, footer, nav, ul, li {
     font-family: "Fleur De Leah", cursive;
 }
 
+/* Sobre nosotros de index.html */
+
+.Info {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    margin-top: 20px;
+}
+
+
+/* Carousel de bootstrap en reserva.html */
 .carousel-section img {
   width: 60%;
   height: 700px;
@@ -207,18 +219,7 @@ div, section, main, header, footer, nav, ul, li {
   height: 600px;
 }
 
-
-
-
-.Info {
-    background-color: rgb(0, 0, 0);
-    color: white;
-    text-align: center;
-    padding: 50px 20px;
-    font-size: 20px;
-    font-family: Arial, sans-serif;
-    margin-top: 20px;
-}
+/* Span en sobre nosotros index.html */
 
 #Ristorante {
     font-weight: bold;
@@ -226,6 +227,8 @@ div, section, main, header, footer, nav, ul, li {
     font-family: "Fleur De Leah", cursive;
     font-size: 28px;
 }
+
+/* Imagen de servicios */
 
 .servicio {
     width: 100%;      
@@ -240,6 +243,8 @@ div, section, main, header, footer, nav, ul, li {
     height: 525px;
     display: inline-block;
 }
+
+/* Formulario de reserva en reserva.html */
 
 .form-box {
     background-color: #f9f9f9;
@@ -290,6 +295,8 @@ div, section, main, header, footer, nav, ul, li {
     background: #a01d1d;
 }
 
+/* Horario en footer */
+
 .Horario-titulo {
     text-align: center;
     font-size: 28px;
@@ -315,6 +322,8 @@ div, section, main, header, footer, nav, ul, li {
     display: inline-flex;
     margin: 45px;
 }
+
+/* Estilos responsivos */
 
 @media (max-width: 900px) {
     .nav {
@@ -354,6 +363,8 @@ div, section, main, header, footer, nav, ul, li {
     }
 }
 
+/* WhatsApp logo */
+
 .whatsapp {
     display: flex;
     position: fixed;
@@ -363,6 +374,8 @@ div, section, main, header, footer, nav, ul, li {
     right: 10px;
 
 }
+
+/* Contact Form */
 
 #contacto-title {
     text-align: center;
@@ -408,6 +421,7 @@ div, section, main, header, footer, nav, ul, li {
     font-size: 16px;
 }
 
+/* Carta */
 .fonts {
     font-family: "Tangerine", cursive;
     font-size: 25px;
@@ -521,8 +535,8 @@ div, section, main, header, footer, nav, ul, li {
 
 .cards-container {
     display: flex;
-    gap: 40px;                 /* Espacio entre las cards */
-    flex-wrap: nowrap;           /* Permite que bajen en móvil */
+    gap: 40px;                
+    flex-wrap: nowrap;           
     justify-content: space-between;
     width: 100%;
     justify-content: center;
@@ -531,8 +545,8 @@ div, section, main, header, footer, nav, ul, li {
 @media (max-width: 768px) {
  .cards-container {
     display: flex;
-    gap: 40px;                 /* Espacio entre las cards */
-    flex-wrap: wrap;           /* Permite que bajen en móvil */
+    gap: 40px;                
+    flex-wrap: wrap;          
     justify-content: space-between;
     width: 40%;
     
