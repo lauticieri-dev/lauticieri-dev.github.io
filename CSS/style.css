@@ -1,4 +1,4 @@
-/* Eliminar márgenes y paddings globalmente */
+/* Reset CSS Global */
 * {
     margin: 0;
     padding: 0;
@@ -6,17 +6,8 @@
 }
 
 html, body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     width: 100%;
     overflow-x: hidden;
-}
-
-/* Reset específico para elementos que pueden tener padding */
-div, section, main, header, footer, nav, ul, li {
-    padding: 0;
-    margin: 0;
 }
 
 /* NAV style */
@@ -25,7 +16,6 @@ div, section, main, header, footer, nav, ul, li {
     display: flex;
     font-size: 55px;
     font-family: "Tangerine", cursive;
-    width: auto;
     gap: 2rem;
 }
 
@@ -33,9 +23,7 @@ div, section, main, header, footer, nav, ul, li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 0px;
 }
-
 
 .header {
     background: linear-gradient(90deg, rgba(0, 146, 70, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(196, 39, 39, 1) 100%);
@@ -43,8 +31,6 @@ div, section, main, header, footer, nav, ul, li {
     align-items: center;
     width: 100%;
     height: 125px;
-
-
 }
 
 .logo {
@@ -52,30 +38,23 @@ div, section, main, header, footer, nav, ul, li {
     height: 100px;
     border-radius: 8px;
     margin-left: 5px;
-    font-size: 1,2rem;
-    font-weight: bold;
 }
 
 .nav li {
     margin-left: 100px;
-    display: inline-block;
-    
 }
-
-
 
 .Markers {
     text-decoration: none;
     color: rgb(141, 9, 9);
     font-weight: bold;
-    }   
+}   
 
 .Markers:hover {
     color: rgb(0, 0, 0);
     text-decoration: underline;
     border-radius: 8px;
     border: 4px solid rgb(236, 0, 0);
-    
 }
 
 .Instagram {
@@ -103,96 +82,24 @@ div, section, main, header, footer, nav, ul, li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    
-
 }
 
-/* Footer */
-.footer {
-    background-color: rgb(0, 146, 70);
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    font-size: 20px;
-    font-family: Arial, sans-serif;
-    margin-top: 20px;
-    height: auto; /* Altura automática en lugar de fija */
-    min-height: 400px; /* Altura mínima */
-}
-
-.footer-Display {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-direction: row; 
-    margin: 0 auto; 
-    padding: 20px;
-    gap: 40px; 
-}
-
-
-#mapa-footer {
-    flex: 1;
-    max-width: 600px;
-}
-
-
-#mapa-footer iframe {
-    width: 600px !important;
-    height: 300px !important;
-    border: 0;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-
-#horario-footer {
-    flex: 1;
-    max-width: 600px;
-}
-
-
-@media (max-width: 768px) {
-    .footer-Display {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-    
-    #mapa-footer iframe {
-        width: 90vw !important;
-        max-width: 400px !important;
-        height: 250px !important;
-    }
-    
-    #horario-footer, #mapa-footer {
-        max-width: 100%;
-        width: 100%;
-    }
-}
-/* Titulo y subtítulos del Hero en index.html */
+/* Títulos del Hero */
 .Titulo {
     font-size: 130px;
     color: crimson;
     font-family: "Fleur De Leah", cursive;
-    font-style: normal;
 }
 
 .Subtitulo {
     font-size: 75px;
-    color:crimson;
+    color: crimson;
     font-family: "Fleur De Leah", cursive;
 }
 
-/* Sobre nosotros de index.html */
-
+/* Sobre nosotros */
 .Info {
-    background-color: rgb(0, 0, 0);
     color: white;
     text-align: center;
     padding: 50px 20px;
@@ -200,26 +107,6 @@ div, section, main, header, footer, nav, ul, li {
     font-family: Arial, sans-serif;
     margin-top: 20px;
 }
-
-
-/* Carousel de bootstrap en reserva.html */
-.carousel-section img {
-  width: 60%;
-  height: 700px;
-  overflow: hidden;
-  display: block;
-  margin: 0 auto;
-  
-}
-
-.carousel-items {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 600px;
-}
-
-/* Span en sobre nosotros index.html */
 
 #Ristorante {
     font-weight: bold;
@@ -229,23 +116,89 @@ div, section, main, header, footer, nav, ul, li {
 }
 
 /* Imagen de servicios */
-
 .servicio {
-    width: 100%;      
-    height: auto;      
-    display: inline-block;    
-    margin: 0 auto;    
+    width: 100%;
     text-align: center;
 }
 
 .servicio img {
-    width: 525px;      
+    width: 525px;
     height: 525px;
-    display: inline-block;
 }
 
-/* Formulario de reserva en reserva.html */
+/* Carousel */
+.carousel-section img {
+    width: 60%;
+    height: 700px;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+}
 
+.carousel-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+}
+
+/* Footer */
+.footer {
+    background-color: rgb(0, 146, 70);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    margin-top: 20px;
+    min-height: 400px;
+}
+
+.footer-Display {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 40px;
+}
+
+#mapa-footer {
+    flex: 1;
+    max-width: 600px;
+}
+
+#mapa-footer iframe {
+    width: 600px !important;
+    height: 300px !important;
+    border: 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#horario-footer {
+    flex: 1;
+    max-width: 600px;
+}
+
+.Horario-titulo {
+    text-align: center;
+    font-size: 28px;
+    color: rgb(146, 0, 0);
+    margin-top: 40px;
+}
+
+.Horario-lista {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    font-size: 20px;
+    color: rgb(141, 24, 18);
+    margin-top: 10px;
+}
+
+/* Formularios */
 .form-box {
     background-color: #f9f9f9;
     padding: 20px;
@@ -267,16 +220,6 @@ div, section, main, header, footer, nav, ul, li {
     font-weight: bold;
 }
 
-.form-box  {
-    width: 100%;
-    padding: 8px;
-    margin-top: 4px;
-    margin-bottom: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    box-sizing: border-box;
-}
-
 .text-container {
     width: 100%;
     padding: 10px;
@@ -288,121 +231,44 @@ div, section, main, header, footer, nav, ul, li {
     cursor: pointer;
     margin-top: 10px;
     transition: background 0.2s;
-    
 }
 
 .form-box input[type="submit"]:hover {
     background: #a01d1d;
 }
 
-/* Horario en footer */
-
-.Horario-titulo {
-    text-align: center;
-    font-size: 28px;
-    color: rgb(146, 0, 0);
-    margin-top: 40px;
-}
-
-.Horario-lista {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-    font-size: 20px;
-    color: rgb(141, 24, 18);
-    margin-top: 10px;
-}
-
-#horario-footer {
-    display: flex;
-    margin: 45px;
-}
-
-#mapa-footer {
-    display: inline-flex;
-    margin: 45px;
-}
-
-/* Estilos responsivos */
-
-@media (max-width: 900px) {
-    .nav {
-        display: flex;
-        top: 0px; 
-        left: 0;
-        width: 100vw;
-        flex-direction: column;
-        background: #fff;
-        z-index: 1000;
-        font-size: 32px;
-        border-bottom: 2px solid #c42727;
-        margin: 0;
-        padding: 0;
-    }
-    .nav.active {
-        display: flex;
-    }
-    .nav li {
-        margin-left: 0;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-    .menu-toggle {
-        display: block;
-        z-index: 1100;
-    }
-    .header {
-        height: auto;
-        flex-direction: row;
-        position: relative;
-        z-index: 1200;
-    }
-    .logo {
-        width: 90px;
-        height: 90px;
-    }
-}
-
-/* WhatsApp logo */
-
+/* WhatsApp */
 .whatsapp {
-    display: flex;
     position: fixed;
     width: 5%;
     height: 5%;
     bottom: 10px;
     right: 10px;
-
 }
 
-/* Contact Form */
-
+/* Formulario de Contacto */
 #contacto-title {
     text-align: center;
     font-size: 50px;
     color: rgb(146, 0, 0);
     font-weight: bold;
-    margin: 0px;
-    display: flex;
-    justify-content: center;
     margin-bottom: 40px;
 }
 
 .contacto-form {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
+    max-width: 700px;
+    margin: 80px auto 0;
+    padding: 30px;
     background-color: rgb(0, 146, 70);
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     text-align: center;
     flex-direction: column;
-    height: 750px;
+    height: 900px;
     font-size: 15px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin-top: 80px;
-    } 
+}
 
 #formCont {
     height: 100%;
@@ -410,15 +276,24 @@ div, section, main, header, footer, nav, ul, li {
     display: flex;
     flex-direction: column;
     justify-content: center;
-} 
+}
 
 #name, #email, #message {
     width: 100%;
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box;
     font-size: 16px;
+}
+
+#message {
+    height: 180px;
+    resize: vertical;
+    padding: 12px;
+    font-family: Arial, sans-serif;
+    line-height: 1.4;
+    border: 2px solid #ddd;
+    background-color: #fff;
 }
 
 /* Carta */
@@ -533,22 +408,132 @@ div, section, main, header, footer, nav, ul, li {
     position: relative;
 }
 
-.cards-container {
-    display: flex;
-    gap: 40px;                
-    flex-wrap: nowrap;           
-    justify-content: space-between;
-    width: 100%;
-    justify-content: center;
+#message {
+    height: 100px;
+    resize: vertical;
 }
 
-@media (max-width: 768px) {
- .cards-container {
-    display: flex;
-    gap: 40px;                
-    flex-wrap: wrap;          
-    justify-content: space-between;
-    width: 40%;
-    
+/* Sección de evaluación */
+fieldset {
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 20px 0;
 }
+
+legend {
+    font-weight: bold;
+    color: white;
+    padding: 0 10px;
+}
+
+.satisfaction-options {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.satisfaction-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.satisfaction-option input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 5px;
+}
+
+.satisfaction-option label {
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+/* Botones */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.text-container {
+    flex: 1;
+}
+
+input[type="submit"] {
+    background: #c42727;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 12px 20px;
+    transition: background 0.2s;
+}
+
+input[type="submit"]:hover {
+    background: #a01d1d;
+}
+
+input[type="reset"] {
+    background: #666;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 12px 20px;
+    transition: background 0.2s;
+}
+
+input[type="reset"]:hover {
+    background: #555;
+}
+
+/* Cartas */
+.section-title {
+    font-size: 50px;
+    color: #ffffff;
+    text-align: center;
+    font-family: "Tangerine", cursive;
+    background-color: rgb(0, 146, 70);
+    padding: 15px;
+}
+
+.Food-section {
+    font-size: 28px;
+    color: #c42727;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.img-food {
+    width: 300px;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-left: 20px;
+    position: relative;
+}
+
+.cards-container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Responsive Cards */
+@media (max-width: 768px) {
+    .cards-container {
+        flex-wrap: wrap;
+        width: 40%;
+    }
 }
