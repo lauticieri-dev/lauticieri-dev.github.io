@@ -30,9 +30,9 @@
     </a>
     <div class="navbar">
         <header class="header">
-
+            <!-- Navbar -->
             <img src="/IMG/Inicio/logo.jpg" alt="Logo Ristorante Cieri" class="logo">
-
+            
             <ul class="nav">
                 <li><a href="index.html" class="Markers">Inicio</a></li>
                 <li><a href="carta.html" class="Markers">Carta</a></li>
@@ -48,6 +48,7 @@
     </div>
 
     <main>
+        <!-- Contact Form -->
         <div class="contacto-form">
             <form id="formCont" method="POST">
                 <h1 id="contacto-title">Contacto</h1>
@@ -63,7 +64,7 @@
 
                 <label for="telefono">Teléfono:</label>
                 <input type="tel" id="telefono" name="telefono" required>
-
+                <!-- Radios Satisfaction -->
                 <fieldset>
                     <legend>¿Se encuentra satisfecho con nuestro servicio?:</legend>
                     <div class="radios">
@@ -81,6 +82,7 @@
                     </div>
 
                 </fieldset>
+                <!-- Select Motive -->
                 <label for="motivo">Motivo del contacto:</label>
                 <select id="motivo" name="motivo" required>
                     <option value="" disabled selected>Seleccione una opción</option>
@@ -121,6 +123,7 @@
 
 
     </footer>
+    <!-- Script EmailJS -->
     <script>
         (function () {
             emailjs.init("3ZnZ6a2Dmy_69E95e"); // Reemplaza con tu User ID de EmailJS
