@@ -13,5 +13,10 @@ _Tanto el mapa como la carta como todo contenido es todo completamente ficticio,
 _Se utilizan múltiples google fonts elements
 _El carousel de Bootstrap se encuentra en reserva.html y posee 7 imágenes
 
+Fallas encontradas:
+_En reserva.html se suma un padding al navbar, el cual, se intentó de borrar mediante muchos medios pero siempre termina igualnuevamente 
+_Aparecen fallas en la consola que no logro solucionar (mas común falla del acelerometro, pongo su supuesta solución del Understand this error y me salen 3 fallas más)
+Desde ya siento mucho por las fallas, pero me superan y no logro forma de solucionarlas con mi experiencia actual
+
 La página hosteada via github pages es: 
 https://lauticieri-dev.github.io/index.html
