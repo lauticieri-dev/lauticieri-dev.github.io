@@ -35,6 +35,16 @@ html, body {
     margin: 0 !important;
 }
 
+/* Excepción para el menú hamburguesa */
+.navbar .menu-toggle {
+    padding: 5px !important;
+    margin-right: 20px !important;
+}
+
+.navbar .menu-toggle span {
+    margin: 3px 0 !important;
+}
+
 .navbar .header {
     margin: 0 !important;
 }
@@ -93,6 +103,8 @@ html, body {
     cursor: pointer;
     margin-right: 20px;
     z-index: 1100;
+    position: relative;
+    padding: 5px;
 }
 
 .menu-toggle span {
@@ -100,8 +112,9 @@ html, body {
     height: 3px;
     background-color: rgb(141, 9, 9);
     margin: 3px 0;
-    transition: 0.3s;
+    transition: 0.3s ease;
     border-radius: 2px;
+    transform-origin: center;
 }
 
 .menu-toggle.active span:nth-child(1) {
@@ -158,6 +171,14 @@ html, body {
 
     .menu-toggle {
         display: flex;
+        padding: 5px !important;
+        margin: 0 !important;
+        position: relative !important;
+    }
+
+    .menu-toggle span {
+        padding: 0 !important;
+        margin: 3px 0 !important;
     }
 
     .Instagram {
@@ -666,6 +687,66 @@ button[type="reset"]:hover,
 @media (max-width: 768px) {
     .cards-container {
         flex-wrap: wrap;
-        width: 40%;
+        width: 100%;
+        display: center;
+
+    }
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-Display {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 20px 10px;
+    }
+
+    #mapa-footer {
+        max-width: 100%;
+        width: 100%;
+        order: 1;
+    }
+
+    #mapa-footer iframe {
+        width: 100% !important;
+        max-width: 400px !important;
+        height: 250px !important;
+        margin: 0 auto;
+        display: block;
+    }
+
+    #horario-footer {
+        max-width: 100%;
+        width: 100%;
+        text-align: center;
+        order: 2;
+    }
+
+    .footer {
+        min-height: auto;
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-Display {
+        padding: 15px 5px;
+        gap: 20px;
+    }
+
+    #mapa-footer iframe {
+        width: 95% !important;
+        max-width: 350px !important;
+        height: 200px !important;
+    }
+
+    .Horario-titulo {
+        font-size: 24px;
+        margin-top: 20px;
+    }
+
+    .Horario-lista {
+        font-size: 18px;
     }
 }

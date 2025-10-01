@@ -1,51 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <link rel="stylesheet" href="CSS/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Permissions-Policy" content="accelerometer=(self), gyroscope=(self), magnetometer=(self)">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data:; img-src 'self' data: https:; font-src 'self' https: data:;">
-    <title>Ristorante Cieri</title>
-
-
-    <!-- Head de Google fonts -->
+    <title>Contacto - Ristorante Cieri</title>
+    <link rel="stylesheet" href="CSS/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Tangerine:wght@400;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
 </head>
 
 <body id="home">
     <a href="https://whatsapp.com" target="_blank">
         <img src="IMG/Inicio/logo whatsapp.png" alt="logo whatsapp" class="whatsapp">
     </a>
+    
     <div class="navbar">
         <header class="header">
-            <!-- Navbar -->
             <img src="IMG/Inicio/logo.jpg" alt="Logo Ristorante Cieri" class="logo">
-            
             <ul class="nav" id="nav">
                 <li><a href="index.html" class="Markers">Inicio</a></li>
                 <li><a href="carta.html" class="Markers">Carta</a></li>
                 <li><a href="reserva.html" class="Markers">Reservas</a></li>
                 <li><a href="contacto.html" class="Markers">Contacto</a></li>
             </ul>
-
             <div class="menu-toggle" id="menu-toggle">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-
             <div class="social">
                 <a href="https://instagram.com" target="_blank">
                     <img src="IMG/Inicio/Instagram logo.png" alt="Logo Instagram" class="Instagram">
@@ -53,14 +37,12 @@
             </div>
         </header>
     </div>
-
     <main>
-        <!-- Contact Form -->
         <div class="contacto-form">
             <form id="formCont" method="POST">
                 <h1 id="contacto-title">Contacto</h1>
-                <label for="name" class="">Nombre:</label>
-                <div class="fonts"></div>
+                
+                <label for="name">Nombre:</label>
                 <input type="text" id="name" name="name" required>
 
                 <label for="email">Correo Electrónico:</label>
@@ -71,7 +53,7 @@
 
                 <label for="telefono">Teléfono:</label>
                 <input type="tel" id="telefono" name="telefono" required>
-                <!-- Radios Satisfaction -->
+                
                 <fieldset>
                     <legend>¿Se encuentra satisfecho con nuestro servicio?:</legend>
                     <div class="radios">
@@ -79,17 +61,13 @@
                             <input type="radio" id="opcion1" name="satisfaction" value="Si" required>
                             Sí
                         </label>
-
                         <label>
                             <input type="radio" id="opcion2" name="satisfaction" value="No" required>
                             No
                         </label>
-
-
                     </div>
-
                 </fieldset>
-                <!-- Select Motive -->
+                
                 <label for="motivo">Motivo del contacto:</label>
                 <select id="motivo" name="motivo" required>
                     <option value="" disabled selected>Seleccione una opción</option>
@@ -106,6 +84,7 @@
             </form>
         </div>
     </main>
+    
     <footer class="footer">
         <div class="footer-Display">
             <div id="horario-footer">
@@ -127,18 +106,13 @@
         </div>
         <p class="footer-text">© 2025 Ristorante Cieri. Todos los derechos reservados.</p>
         <a href="mailto:lauticieri@gmail.com" class="email-link">Email de contacto: lauticieri@gmail.com</a>
-
-
     </footer>
-    <!-- Script EmailJS -->
+    
     <script>
         (function () {
-            emailjs.init("3ZnZ6a2Dmy_69E95e"); // Reemplaza con tu User ID de EmailJS
+            emailjs.init("3ZnZ6a2Dmy_69E95e");
         })();
     </script>
     <script src="JS/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
-
 </html>
