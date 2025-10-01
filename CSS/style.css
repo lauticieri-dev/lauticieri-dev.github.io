@@ -12,6 +12,10 @@ html, body {
     padding: 0 !important;
 }
 
+#home {
+    background-color: black;
+}
+
 /* NAV style */
 .nav {
     list-style: none;
