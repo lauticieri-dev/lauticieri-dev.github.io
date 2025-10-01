@@ -122,5 +122,37 @@ document.addEventListener('DOMContentLoaded', function() {
     if (contactForm) {
         contactForm.addEventListener('submit', enviarContacto);
     }
+
+    // Menú Hamburguesa
+    const menuToggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('nav');
+    
+    if (menuToggle && nav) {
+        menuToggle.addEventListener('click', function() {
+            // Toggle de las clases activas
+            menuToggle.classList.toggle('active');
+            nav.classList.toggle('active');
+        });
+
+        // Cerrar menú cuando se hace click en un enlace
+        const navLinks = nav.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                menuToggle.classList.remove('active');
+                nav.classList.remove('active');
+            });
+        });
+
+        // Cerrar menú cuando se hace click fuera
+        document.addEventListener('click', function(event) {
+            const isClickInsideNav = nav.contains(event.target);
+            const isClickOnToggle = menuToggle.contains(event.target);
+            
+            if (!isClickInsideNav && !isClickOnToggle && nav.classList.contains('active')) {
+                menuToggle.classList.remove('active');
+                nav.classList.remove('active');
+            }
+        });
+    }
 });
 

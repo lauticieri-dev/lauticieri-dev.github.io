@@ -14,9 +14,9 @@ html, body {
 .nav {
     list-style: none;
     display: flex;
-    font-size: 55px;
+    font-size: 45px;
     font-family: "Tangerine", cursive;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .navbar {
@@ -29,8 +29,12 @@ html, body {
     background: linear-gradient(90deg, rgba(0, 146, 70, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(196, 39, 39, 1) 100%);
     display: flex;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
     height: 125px;
+    position: relative;
+    z-index: 1200;
+    padding: 0 20px;
 }
 
 .logo {
@@ -41,7 +45,7 @@ html, body {
 }
 
 .nav li {
-    margin-left: 100px;
+    margin-left: 0;
 }
 
 .Markers {
@@ -61,10 +65,94 @@ html, body {
     width: 50px;
     height: 50px;
     margin-right: 15px;
-    margin-left: 70px;
+    margin-left: 20px;
     background-color: rgb(0, 0, 0);
     border-radius: 50%;
     padding: 8px; 
+}
+
+/* Menú Hamburguesa */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 20px;
+    z-index: 1100;
+}
+
+.menu-toggle span {
+    width: 30px;
+    height: 3px;
+    background-color: rgb(141, 9, 9);
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Responsive Navigation */
+@media (max-width: 900px) {
+    .nav {
+        position: fixed;
+        top: 125px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 125px);
+        background: linear-gradient(180deg, rgba(0, 146, 70, 0.95) 0%, rgba(255, 255, 255, 0.95) 50%, rgba(196, 39, 39, 0.95) 100%);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        transition: left 0.3s ease;
+        padding-top: 50px;
+        z-index: 1000;
+        backdrop-filter: blur(10px);
+    }
+
+    .nav.active {
+        left: 0;
+    }
+
+    .nav li {
+        margin: 20px 0;
+        margin-left: 0;
+    }
+
+    .Markers {
+        font-size: 45px;
+        padding: 10px 20px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .Markers:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: scale(1.05);
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .Instagram {
+        margin-left: 20px;
+    }
+
+    .header {
+        justify-content: space-between;
+        padding: 0 10px;
+    }
 }
 
 #home {
@@ -128,11 +216,28 @@ html, body {
 
 /* Carousel */
 .carousel-section img {
-    width: 60%;
+    width: 65%;
     height: 700px;
-    overflow: hidden;
+    object-fit: cover;
     display: block;
     margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive carousel */
+@media (max-width: 768px) {
+    .carousel-section img {
+        width: 90%;
+        height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-section img {
+        width: 95%;
+        height: 300px;
+    }
 }
 
 .carousel-items {
@@ -465,7 +570,11 @@ legend {
     flex: 1;
 }
 
-input[type="submit"] {
+/* Botones de formularios */
+input[type="submit"], 
+input[type="button"], 
+button[type="submit"],
+.btn-primary {
     background: #c42727;
     color: #fff;
     border: none;
@@ -476,11 +585,17 @@ input[type="submit"] {
     transition: background 0.2s;
 }
 
-input[type="submit"]:hover {
+input[type="submit"]:hover, 
+input[type="button"]:hover, 
+button[type="submit"]:hover,
+.btn-primary:hover {
     background: #a01d1d;
 }
 
-input[type="reset"] {
+/* Botones de reset/limpiar - Estilo unificado */
+input[type="reset"],
+button[type="reset"],
+.btn-secondary {
     background: #666;
     color: #fff;
     border: none;
@@ -491,7 +606,9 @@ input[type="reset"] {
     transition: background 0.2s;
 }
 
-input[type="reset"]:hover {
+input[type="reset"]:hover,
+button[type="reset"]:hover,
+.btn-secondary:hover {
     background: #555;
 }
 
