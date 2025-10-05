@@ -440,6 +440,9 @@ html, body {
     border: 2px solid #ddd;
     background-color: #fff;
 }
+.form-buttons {
+    padding-top: 15px;
+}
 
 /* Carta */
 .fonts {
