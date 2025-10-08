@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - Ristorante Cieri</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&family=BBH+Sans+Bogle&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Tangerine:wght@400;700&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Tangerine:wght@400;700&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,24 +48,24 @@
             <form id="formCont" method="POST">
                 <h1 id="contacto-title">Contacto</h1>
                 
-                <label for="name">Nombre:</label>
+                <label for="name">NOMBRE:</label>
                 <input type="text" id="name" name="name" required>
 
-                <label for="email">Correo Electrónico:</label>
+                <label for="email">CORREO ELECTRONICO:</label>
                 <input type="email" id="email" name="email" required>
 
-                <label for="message">Mensaje:</label>
-                <textarea id="message" name="message" rows="12" placeholder="Escriba aquí su mensaje detallado..." required></textarea>
+                <label for="message">MENSAJE:</label>
+                <textarea id="message" name="message" rows="12" placeholder="Escriba aqui su mensaje detallado..." required></textarea>
 
-                <label for="telefono">Teléfono:</label>
+                <label for="telefono">TELEFONO:</label>
                 <input type="tel" id="telefono" name="telefono" required>
                 
                 <fieldset>
-                    <legend>¿Se encuentra satisfecho con nuestro servicio?:</legend>
+                    <legend>Se encuentra satisfecho con nuestro servicio?</legend>
                     <div class="radios">
                         <label>
                             <input type="radio" id="opcion1" name="satisfaction" value="Si" required>
-                            Sí
+                            Si
                         </label>
                         <label>
                             <input type="radio" id="opcion2" name="satisfaction" value="No" required>
@@ -68,12 +74,12 @@
                     </div>
                 </fieldset>
                 
-                <label for="motivo">Motivo del contacto:</label>
+                <label for="motivo">MOTIVO DEL CONTACTO:</label>
                 <select id="motivo" name="motivo" required>
-                    <option value="" disabled selected>Seleccione una opción</option>
+                    <option value="" disabled selected>Seleccione una opcion</option>
                     <option value="sugerencia">Sugerencia</option>
                     <option value="queja">Queja</option>
-                    <option value="informacion">Solicitar información</option>
+                    <option value="informacion">Solicitar informacion</option>
                     <option value="otro">Otro</option>
                 </select>
                 
@@ -105,7 +111,6 @@
             </div>
         </div>
         <p class="footer-text">© 2025 Ristorante Cieri. Todos los derechos reservados.</p>
-        <a href="mailto:lauticieri@gmail.com" class="email-link">Email de contacto: lauticieri@gmail.com</a>
     </footer>
     
     <script>

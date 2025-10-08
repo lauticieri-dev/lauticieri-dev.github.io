@@ -20,9 +20,10 @@ html, body {
 .nav {
     list-style: none;
     display: flex;
-    font-size: 45px;
+    font-size: 60px;
     font-family: "Tangerine", cursive;
-    gap: 1.5rem;
+    gap: 60px;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .navbar {
@@ -79,7 +80,7 @@ html, body {
 
 .Markers {
     text-decoration: none;
-    color: rgb(141, 9, 9);
+    color: rgb(186, 48, 48);
     font-weight: bold;
 }   
 
@@ -87,7 +88,7 @@ html, body {
     color: rgb(0, 0, 0);
     text-decoration: underline;
     border-radius: 8px;
-    border: 4px solid rgb(236, 0, 0);
+    border: 4px solid rgb(231, 50, 50);
 }
 
 .Instagram {
@@ -201,6 +202,10 @@ html, body {
 
 
 /* Hero Main */
+.overlay {
+    position: static;
+    background-color: rgba(0, 0, 0, 0.6);
+}
 .hero {
     background-image: url(../IMG/Inicio/Ristorante\ Cieri.jpg);
     background-size: cover;
@@ -218,12 +223,30 @@ html, body {
     font-size: 130px;
     color: crimson;
     font-family: "Fleur De Leah", cursive;
+    text-shadow: 
+        3px 3px 6px rgba(0, 0, 0, 0.8),
+        -2px -2px 4px rgba(0, 0, 0, 0.6),
+        0 0 20px rgba(220, 20, 60, 0.3);
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1));
+    padding: 20px 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(2px);
+    margin-bottom: 10px;
 }
 
 .Subtitulo {
     font-size: 75px;
     color: crimson;
     font-family: "Fleur De Leah", cursive;
+    font-weight: lighter;
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.8),
+        -1px -1px 2px rgba(0, 0, 0, 0.6),
+        0 0 15px rgba(220, 20, 60, 0.2);
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
+    padding: 15px 30px;
+    border-radius: 10px;
+    backdrop-filter: blur(2px);
 }
 
 /* Sobre nosotros */
@@ -297,21 +320,25 @@ html, body {
     font-size: 20px;
     font-family: Arial, sans-serif;
     margin-top: 20px;
-    min-height: 400px;
+    min-height: 350px;
 }
 
 .footer-Display {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     margin: 0 auto;
-    padding: 20px;
-    gap: 40px;
+    padding: 40px 20px;
+    gap: 6cm;
+    min-height: 350px;
 }
 
 #mapa-footer {
     flex: 1;
-    max-width: 600px;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #mapa-footer iframe {
@@ -324,14 +351,20 @@ html, body {
 
 #horario-footer {
     flex: 1;
-    max-width: 600px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
 }
 
 .Horario-titulo {
     text-align: center;
     font-size: 28px;
-    color: rgb(146, 0, 0);
-    margin-top: 40px;
+    color: rgb(255, 255, 255);
+    margin-top: 0px;
+    margin-bottom: 15px;
 }
 
 .Horario-lista {
@@ -339,43 +372,60 @@ html, body {
     padding: 0;
     text-align: center;
     font-size: 20px;
-    color: rgb(141, 24, 18);
+    color: rgb(255, 255, 255);
     margin-top: 10px;
 }
 
 /* Formularios */
 .form-box {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: beige;
+    padding: 30px;
+    border-radius: 12px;
     max-width: 600px;
-    margin: 20px auto;
+    margin: 40px auto;
+    font-family: "BBH Sans Bogle", sans-serif;
+}
+
+.form-box h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: rgb(146, 0, 0);
+    font-size: 48px;
+    font-weight: bold;
 }
 
 .form-box h2 {
     text-align: center;
     margin-bottom: 20px;
-    color: #d30c0c;
+    color: rgb(146, 0, 0);
 }
 
 .form-box label {
     display: block;
-    margin-top: 10px;
+    margin-top: 15px;
+    margin-bottom: 5px;
     font-weight: bold;
+    color: rgb(146, 0, 0);
+    font-size: 24px;
 }
 
 .text-container {
     width: 100%;
-    padding: 10px;
-    background: #c42727;
-    color: #fff;
-    border: none;
+    padding: 12px;
+    border: 2px solid #ddd;
     border-radius: 6px;
-    font-size: 18px;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background 0.2s;
+    font-size: 16px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+    background-color: #fff;
+    color: #333;
+}
+
+.text-container:focus {
+    outline: none;
+    border-color: #c42727;
+    box-shadow: 0 0 5px rgba(196, 39, 39, 0.3);
 }
 
 .form-box input[type="submit"]:hover {
@@ -400,48 +450,73 @@ html, body {
     margin-bottom: 40px;
 }
 
+.contacto-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: rgb(146, 0, 0);
+    font-size: 24px;
+}
+
 .contacto-form {
-    max-width: 700px;
-    margin: 80px auto 0;
+    max-width: 600px;
+    margin: 40px auto;
     padding: 30px;
-    background-color: rgb(0, 146, 70);
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: beige;
+    border-radius: 12px;
+    box-shadow: 
+        0 8px 25px rgba(0, 0, 0, 0.15),
+        0 4px 10px rgba(0, 0, 0, 0.1),
+        0 2px 4px rgba(0, 0, 0, 0.05);
     display: flex;
     text-align: center;
     flex-direction: column;
-    height: 900px;
-    font-size: 15px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    min-height: auto;
+    font-size: 25px;
+    font-family: "BBH Sans Bogle", sans-serif;
+    font-weight: normal;
 }
 
 #formCont {
-    height: 100%;
-    gap: 20px;
+    gap: 15px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    padding: 20px 0;
 }
 
 #name, #email, #message {
     width: 100%;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
     font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+#name:focus, #email:focus, #message:focus {
+    outline: none;
+    border-color: #c42727;
+    box-shadow: 0 0 5px rgba(196, 39, 39, 0.3);
 }
 
 #message {
-    height: 180px;
+    height: 120px;
     resize: vertical;
     padding: 12px;
     font-family: Arial, sans-serif;
     line-height: 1.4;
     border: 2px solid #ddd;
     background-color: #fff;
+    border-radius: 6px;
+    box-sizing: border-box;
 }
 .form-buttons {
-    padding-top: 15px;
+    padding-top: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
 }
 
 /* Carta */
@@ -471,10 +546,10 @@ html, body {
     border-style: dotted;
     border-color: #c42727;
     width: 800px;
-    max-width: 90%; /* Responsivo en pantallas pequeñas */
-    margin: 40px auto; /* Margen superior e inferior de 40px, centrado horizontal */
-    padding: 30px 40px; /* Espaciado interno */
-    box-sizing: border-box; /* Para que el padding no afecte el ancho total */
+    max-width: 90%; 
+    margin: 40px auto; 
+    padding: 30px 40px; 
+    box-sizing: border-box;
     display: block;
     position: relative; 
 }
@@ -561,7 +636,7 @@ html, body {
     resize: vertical;
 }
 
-/* Sección de evaluación */
+
 fieldset {
     border: 2px solid white;
     border-radius: 5px;
@@ -571,7 +646,7 @@ fieldset {
 
 legend {
     font-weight: bold;
-    color: white;
+    color: rgb(146, 0, 0);
     padding: 0 10px;
 }
 
@@ -596,7 +671,7 @@ legend {
 
 .satisfaction-option label {
     font-size: 14px;
-    color: white;
+    color: rgb(146, 0, 0);
     text-align: center;
     margin: 0;
 }
@@ -728,6 +803,11 @@ button[type="reset"]:hover,
         width: 100%;
         text-align: center;
         order: 2;
+        padding: 20px 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .footer {
