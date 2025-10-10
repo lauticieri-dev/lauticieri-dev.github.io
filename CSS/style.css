@@ -627,7 +627,7 @@ html, body {
     height: 200px;
     border-radius: 8px;
     object-fit: cover;
-    margin-left: 20px;
+    margin-left: auto;
     position: relative;
 }
 
